@@ -11,8 +11,14 @@ export default function FlashCards() {
 
     function Conteiner() {
         return (
-            <div className="conteiner-flashcards">
-            </div>
+            <ul className="conteiner-flashcards">
+                <li>
+                    <div className="questions">
+                        <p>Pergunta 1</p>
+                        <ion-icon name="play-outline"></ion-icon>
+                    </div>
+                </li>
+            </ul>
         )
     }
 
