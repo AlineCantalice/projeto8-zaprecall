@@ -1,3 +1,5 @@
+import Questions from "./Questions"
+
 export default function FlashCards() {
 
     function Header() {
@@ -12,12 +14,7 @@ export default function FlashCards() {
     function Conteiner() {
         return (
             <ul className="conteiner-flashcards">
-                <li>
-                    <div className="questions">
-                        <p>Pergunta 1</p>
-                        <ion-icon name="play-outline"></ion-icon>
-                    </div>
-                </li>
+                <Questions counter={1}/>
             </ul>
         )
     }

@@ -1,8 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Recursive:wght@300;400;500;600;700;800;900&family=Righteous&display=swap');
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: 'Recursive', sans-serif;
-    box-sizing: border-box;
 }
 
 h1 {
@@ -50,6 +53,7 @@ ion-icon {
     width: 246px;
     height: 54px;
     border: 1px solid #D70900;
+    border-radius: 5px;
     background-color: #FFFFFF;
     font-family: 'Recursive', sans-serif;
     font-size: 18px;
@@ -114,4 +118,26 @@ ion-icon {
 .questions p {
     font-size: 16px;
     font-weight: 700;
+}
+
+.question {
+    width: 300px;
+    height: 131px;
+    background-color: #FFFFD5;
+    box-shadow: 0px 4px 5px rgb(0 0 0 / 15%);
+    border-radius: 5px;
+    position: relative;
+}
+
+.question p {
+    padding: 18px 15px;
+}
+
+.question img {
+    width: 30px;
+    height: 20px;
+    position: absolute;
+    bottom: 0;
+    right: calc(100% - 300px);
+    margin: 6px 15px;
 }
