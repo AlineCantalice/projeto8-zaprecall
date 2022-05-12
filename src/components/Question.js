@@ -1,6 +1,8 @@
 import React from "react"
 import Answers from "./Answers";
 
+import setinha from "../assets/img/setinha.png";
+
 export default function Question() {
 
     const [clicked, setClicked] = React.useState(false);
@@ -10,7 +12,7 @@ export default function Question() {
             {clicked ? <Answers /> : (
                 <>
                     <p>O que é JSX?</p>
-                    <img onClick={() => setClicked(true)} src="assets/img/setinha.png" alt="mostrar-resposta" />
+                    <img onClick={() => setClicked(true)} src={setinha} alt="mostrar-resposta" />
                 </>
             )}
         </div>

@@ -1,11 +1,14 @@
 import Questions from "./Questions"
 
+import logoPequeno from "../assets/img/logo-pequeno.png";
+import emoticonParty from "../assets/img/party.png";
+
 export default function FlashCards() {
 
     function Header() {
         return (
             <div className="header">
-                <img src="/assets/img/logo-pequeno.png" alt="logo-pequeno" />
+                <img src={logoPequeno} alt="logo-pequeno" />
                 <h1>ZapRecall</h1>
             </div>
         )
@@ -23,7 +26,7 @@ export default function FlashCards() {
         return (
             <div className="footer-end-recall">
                 <div className="header-end">
-                    <img src="assets/img/party.png" alt="party" />
+                    <img src={emoticonParty} alt="party" />
                     <p>Parabéns!</p>
                 </div>
                 <div className="conteiner-end">
