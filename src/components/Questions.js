@@ -8,7 +8,7 @@ export default function Questions({ counter }) {
     return (
         <li onClick={() => setClicked(true)}>
             {clicked ? <Question /> : (<div className="questions">
-                <p>Pergunta {counter}</p>
+                <p className="">Pergunta {counter}</p>
                 <ion-icon name="play-outline"></ion-icon>
             </div>)}
         </li>

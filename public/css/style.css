@@ -12,8 +12,6 @@ h1 {
     font-size: 36px;
     font-family: 'Righteous', cursive;
     color: #FFFFFF;
-    padding-bottom: 30px;
-    padding-top: 13px;
 }
 
 p {
@@ -21,6 +19,8 @@ p {
     font-size: 18px;
     font-weight: 400;
 }
+
+
 
 ion-icon {
     font-size: 23px;
@@ -47,11 +47,13 @@ ion-icon {
 .conteiner img {
     width: 136px;
     height: 161px;
+    padding-bottom: 15px;
 }
 
 .conteiner button {
     width: 246px;
     height: 54px;
+    margin-top: 30px;
     border: 1px solid #D70900;
     border-radius: 5px;
     background-color: #FFFFFF;
@@ -73,6 +75,7 @@ ion-icon {
     width: 52px;
     height: 60px;
     margin-right: 15px;
+    padding-bottom: 0;
 }
 
 .conteiner-flashcards {
@@ -89,11 +92,12 @@ ion-icon {
     overflow-x: scroll;
 }
 
-.footer {
+.footer-end-recall {
     width: 100%;
-    height: 70px;
+    height: 171px;
     background-color: #FFFFFF;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     position: fixed;
@@ -101,6 +105,61 @@ ion-icon {
     bottom: 0;
     z-index: 1;
     box-shadow: 0 -4px 6px 0 rgba(0, 0, 0, 5%);
+}
+
+.footer {
+    height: 70px;
+}
+
+.header-end {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 0;
+}
+
+.header-end img {
+    width: 23px;
+    height: 23px;
+    margin: 15px 12px;
+    padding-bottom: 0;
+}
+
+.header-end p {
+    font-weight: 700;
+}
+
+.conteiner-end {
+    width: 222px;
+}
+
+.conteiner-end p {
+    text-align: center;
+    margin-top: 45px;
+    margin-bottom: 15px;
+}
+
+.footer-end {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-end p {
+    margin-bottom: 7px;
+}
+
+.red {
+    color: #FF3030;
+}
+
+.orange {
+    color: #FF922E;
+}
+
+.green {
+    color: #2FBE34;
 }
 
 .questions {
@@ -160,14 +219,18 @@ ion-icon {
     font-weight: 400;
 }
 
-.buttons button.red-button{
+.buttons button.red-button {
     background-color: #FF3030;
 }
 
-.buttons button.orange-button{
+.buttons button.orange-button {
     background-color: #FF922E;
 }
 
-.buttons button.green-button{
+.buttons button.green-button {
     background-color: #2FBE34;
+}
+
+.line-through {
+    text-decoration: line-through;
 }
