@@ -5,6 +5,41 @@ import emoticonParty from "../assets/img/party.png";
 
 export default function FlashCards() {
 
+    const deck = [
+        {
+            question: "O que é JSX?",
+            answer: "Uma extensão de linguagem do JavaScript"
+        },
+        {
+            question: "O React é __",
+            answer: "uma biblioteca JavaScript para construção de interfaces"
+        },
+        {
+            question: "Componentes devem iniciar com __",
+            answer: "letra maiúscula"
+        },
+        {
+            question: "Podemos colocar __ dentro do JSX",
+            answer: "expressões"
+        },
+        {
+            question: "O ReactDOM nos ajuda __",
+            answer: "interagindo com a DOM para colocar componentes React na mesma"
+        },
+        {
+            question: "Usamos o npm para __",
+            answer: "gerenciar os pacotes necessários e suas dependências"
+        },
+        {
+            question: "Usamos props para __",
+            answer: "passar diferentes informações para componentes"
+        },
+        {
+            question: "Usamos estado (state) para __",
+            answer: "dizer para o React quais informações quando atualizadas devem renderizar a tela novamente"
+        }
+    ]
+
     function Header() {
         return (
             <div className="header">
@@ -15,9 +50,10 @@ export default function FlashCards() {
     }
 
     function Conteiner() {
+        shuffle(deck);
         return (
             <ul className="conteiner-flashcards">
-                <Questions counter={1} />
+                {deck.map((element, index) => <Questions question={element.question} answer={element.answer} counter={index+1} />)}
             </ul>
         )
     }
@@ -42,6 +78,17 @@ export default function FlashCards() {
                 </div>
             </div>
         )
+    }
+
+    function shuffle(deck) {
+
+        for (let index = deck.length; index; index--) {
+    
+            const randomIndex = Math.floor(Math.random() * index);
+    
+            [deck[index - 1], deck[randomIndex]] = 
+                [deck[randomIndex], deck[index - 1]];
+        }
     }
 
     function Footer() {

@@ -1,7 +1,7 @@
-export default function Answers(){
+export default function Answers({answer}){
     return (
         <>
-            <p>JSX é uma sintaxe para escrever HTML dentro do JS</p>
+            <p>{answer}</p>
             <div className="buttons">
                 <button className="red-button">Não lembrei</button>
                 <button className="orange-button">Quase não lembrei</button>
