@@ -22,7 +22,7 @@ export default function End({ flashcardNumber, answeredFlashcards, icons, answer
         <section className="footer-end-recall">
             <div className="header-end">
                 <img src={emoji} alt={title} />
-                <h3>{title}</h3>
+                <p>{title}</p>
             </div>
 
             <div className="conteiner-end">

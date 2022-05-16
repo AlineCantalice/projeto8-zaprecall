@@ -57,6 +57,7 @@ ion-icon {
     font-family: 'Recursive', sans-serif;
     font-size: 18px;
     color: #D70900;
+    margin-top: 30px;
 }
 
 .conteiner h1{
@@ -163,7 +164,7 @@ ion-icon {
     color: #2FBE34;
 }
 
-.questions {
+.question.inicial, .question.respondido {
     width: 300px;
     height: 65px;
     margin-bottom: 25px;
@@ -176,7 +177,7 @@ ion-icon {
     align-items: center;
 }
 
-.questions p {
+.question.inicial p, .question.respondido p {
     font-size: 16px;
     font-weight: 700;
 }

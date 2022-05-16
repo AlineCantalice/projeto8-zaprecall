@@ -24,40 +24,40 @@ export default function FlashCard({flashcard, index, updateProgress}){
     switch(status.fase){
         case "perguntando":
             Flashcard =
-                <article className="questions">
+                <li className="question">
                     <p>{question}</p>
                     <img src={setinha} alt="mostrar-resposta" onClick={() => setStatus({ ...status, fase: "respondendo" })} />
-                </article>
+                </li>
             break;
 
         case "respondendo":
             Flashcard =
-                <article className="questions respondendo">
+                <li className="question respondendo">
                     <p>{answer}</p>
                     <div className="buttons">
-                        <button className="red" onClick={() => { chooseAnswer(["close-circle", "red"]) }}>Não lembrei</button>
+                        <button className="red-button" onClick={() => { chooseAnswer(["close-circle", "red"]) }}>Não lembrei</button>
 
-                        <button className="orange" onClick={() => { chooseAnswer(["help-circle", "orange"]) }}>Quase não lembrei</button>
+                        <button className="orange-button" onClick={() => { chooseAnswer(["help-circle", "orange"]) }}>Quase não lembrei</button>
 
-                        <button className="green" onClick={() => { chooseAnswer(["checkmark-circle", "green"]) }}>Zap!</button>
+                        <button className="green-button" onClick={() => { chooseAnswer(["checkmark-circle", "green"]) }}>Zap!</button>
                     </div>
-                </article>
+                </li>
             break;
 
         case "respondido":
             Flashcard =
-                <article className="questions respondido">
+                <li className="question respondido">
                     <p className={`line-through ${status.answer}`}>Pergunta {questionNumber}</p>
                     <ion-icon name={status.icon}></ion-icon>
-                </article>
+                </li>
             break;
 
         default:
             Flashcard =
-                <article className="questions inicial">
+                <li className="question inicial">
                     <p>Pergunta {questionNumber}</p>
                     <ion-icon name="play-outline" onClick={() => setStatus({ ...status, fase: "perguntando" })}></ion-icon>
-                </article>
+                </li>
     }
 
     return Flashcard;

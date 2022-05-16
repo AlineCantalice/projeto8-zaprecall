@@ -96,8 +96,8 @@ export default function FlashCards() {
         <>
             <Header />
 
-            <main>
-                <ul className="conteiner-flashcards">
+            <main className="conteiner-flashcards">
+                <ul className="questions">
                     <Deck deck={deck} updateProgress={updateProgress} />
                 </ul>
             </main>
