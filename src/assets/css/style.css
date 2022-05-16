@@ -90,7 +90,7 @@ ion-icon {
     top: 140px;
     left: 0;
     bottom: 175px;
-    overflow-x: scroll;
+    overflow-y: auto;
 }
 
 .footer-end-recall {
